@@ -1,21 +1,16 @@
-Project Ambition :- BUILD for Social Good on web3 with Infura and Truffle & Build with Polygon
+Project Ambition: BUILD for Social Good on web3 with Infura and Truffle and Polygon
 
+Project Name: no “Centralized” Middle Men Contents and Supports for Social Good
 
-Project Name - Social Contents (Contents related to Social Good)
+Project Description:
 
-Project Description:-
+The project is a content posting website (similar to medium, Wikipedia and etc.) but with an emphasis on social cause. Traditional web 2.0 rewards users by giving them money while at the same time cutting a large chunk of ad revenue just because they are the middle men. This project solves the issue by getting rid of the “centralized” middle men while doing good to the society. In addition, we are also trying to solve the problem where beginner authors are not getting immediate reward, hence making them lose motivation in the long run. We are offering them NFTs as soon as they post content. The reward increases if they continue to make impactful content in the future or gather more support from the community.
 
-The project is basically a content posting website (like medium,wikipedia,etc) but with special emphasis on Social Causes. Traditional web 2.0 rewards users with giving them money while cutting a significant chunk of ad revenue just because they are the middle men. This project aims to solve the issues of middle players while doing good to the society. 
+In this dApp, a person who contributes can earn tokens by:
+1.	Upon making a valid content/post she or he is awarded an NFT on the wallet address.
+2.	The ad revenue generated is directly sent to her/his wallet.
+3.	Any third-party sponsors/users/readers/community members can donate tokens to support the cause.
 
-So here a person who contributes can earn by :- 
-1. Upon making a valid content/post they are awarded a NFT on their wallet address.
-2. The ad revenue generated is directly sent to their account.
-3. There will be a wallet address of the user attached with the post, any third party reader can donate money according to their choice.
+The user can make posts on topics from current social issues to ideas that improve quality of life for people, pretty much anything that can help increase social goods in general.
 
-The users can make posts on topics from current scenarios of society to ideas to improving lives of people and anything which can help increase social goods in general.
-
-Here, we are also trying to solve the problems where a beginner authors are not getting immediate rewards hence making them lose motivation for the long run. We are offering them NFTs as soon as they post content and the reward increases if he/she continues making impactful content in the future.
-
-
-
-Target Audience :- NGOs,organizations and individuals who are looking for contents/posters for their campaign on social causes. Well in general it can be used by any person willing to learn about social problems and their solutions.
+Target Audience: NGOs, organizations and individuals who are looking for contents/posters for their campaign on social causes. It can be also used by any person wanting to learn about and/or support social problems and their solutions.
