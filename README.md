@@ -1,4 +1,4 @@
-Project Ambition (Bounty) :- BUILD for Social Good on web3 with Infura and Truffle & Build with Polygon
+Project Ambition :- BUILD for Social Good on web3 with Infura and Truffle & Build with Polygon
 
 
 Project Name - Social Contents (Contents related to Social Good)
