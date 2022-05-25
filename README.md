@@ -8,9 +8,9 @@ Project Description:-
 The project is basically a content posting website (like medium,wikipedia,etc) but with special emphasis on Social Causes. Traditional web 2.0 rewards users with giving them money while cutting a significant chunk of ad revenue just because they are the middle men. This project aims to solve the issues of middle players while doing good to the society. 
 
 So here a person who contributes can earn by :- 
-Upon making a valid content/post they are awarded a NFT on their wallet address.
-The ad revenue generated is directly sent to their account.
-There will be a wallet address of the user attached with the post, any third party reader can donate money according to their choice.
+1. Upon making a valid content/post they are awarded a NFT on their wallet address.
+2. The ad revenue generated is directly sent to their account.
+3. There will be a wallet address of the user attached with the post, any third party reader can donate money according to their choice.
 
 The users can make posts on topics from current scenarios of society to ideas to improving lives of people and anything which can help increase social goods in general.
 
