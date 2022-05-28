@@ -1,24 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { mappingData } from "./data";
+import Add from "./components/Add";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
 
 function App() {
+  const [auth, setAuth] = useState(false);
+  const [data, setData] = useState(mappingData);
+
+  const trim = (content) => {
+    let ret;
+    if (content.length > 40) {
+      ret = content.substring(0, 40) + "...";
+    } else {
+      ret = content;
+    }
+    return ret;
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateRows: "10vh 90vh",
+        }}
+      >
+        <Navbar />
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={<Home trim={trim} mappingData={data} />}
+          />
+          <Route
+            exact
+            path="/add"
+            element={
+              <Add
+                auth={auth}
+                setAuth={setAuth}
+                data={data}
+                setData={setData}
+              />
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
