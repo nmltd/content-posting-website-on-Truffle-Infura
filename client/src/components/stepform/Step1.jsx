@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Step1 = ({ alias, setAlias, nextStep }) => {
+const Step1 = ({ alias, setAlias, nextStep, wallet }) => {
   return (
       <div>
-        <p>Wallet ID : <b>abcdefghijklmnop</b></p>
+        <p>Wallet ID : <b>{wallet !== null ? wallet : ""}</b></p>
         <div className="mb-4">
             <label htmlFor="alias" className="form-label">Enter Your Alias</label>
             <input

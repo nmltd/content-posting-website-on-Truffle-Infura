@@ -5,10 +5,12 @@ import { mappingData } from "./data";
 import Add from "./components/Add";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import ShowPost from "./components/ShowPost";
 
 function App() {
   const [auth, setAuth] = useState(false);
   const [data, setData] = useState(mappingData);
+  const [wallet, setWallet] = useState(null);
 
   const trim = (content) => {
     let ret;
@@ -44,8 +46,15 @@ function App() {
                 setAuth={setAuth}
                 data={data}
                 setData={setData}
+                setWallet={setWallet}
+                wallet={wallet}
               />
             }
+          />
+          <Route
+            exact
+            path="/post/:id"
+            element={<ShowPost data={data} setData={setData} />}
           />
         </Routes>
       </div>

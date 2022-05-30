@@ -4,7 +4,7 @@ const Step3 = ({ setContent, content, prevStep, handleSubmit }) => {
   return (
       <div>
           <div className="mb-3">
-            <label htmlFor="formFile" className="form-label">Write about your work</label>
+            <label htmlFor="formFile" className="form-label">Write about your content</label>
             <textarea
                 name="content"
                 id="content"

@@ -13,7 +13,7 @@ const Step2 = ({ title, setTitle, setImageFile, setImgUrl, imgUrl, prevStep, nex
                 onChange={(event) => {
                     setTitle(event.target.value);
             }} />
-            <label htmlFor="formFile" className="form-label">Upload a Cover Picture</label>
+            <label htmlFor="formFile" className="form-label">Upload a Cover Picture (optional)</label>
             <input
                 className="form-control"
                 type="file"

@@ -13,7 +13,7 @@ const Navbar = () => {
         className='bg-dark fixed-top'
         >
             <Link to="/" style={{textDecoration: "none", color: '#FFFFFF'}}>
-                <h1 className="display-5">App</h1>
+                <h1 className="display-7">Social Contents</h1>
             </Link>
             <Link 
                 to='/add'

@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import Step1 from './stepform/Step1';
 import Step2 from './stepform/Step2';
 import Step3 from './stepform/Step3';
-//import MetaMaskOnboarding from '@metamask/onboarding'
-//const onboarding = new MetaMaskOnboarding();
+import axios from 'axios';
 const { ethereum } = window;
 
-const Add = ({ auth, setAuth, setData, data }) => {
+
+const Add = ({ auth, setAuth, setData, data, wallet, setWallet }) => {
     const [step, setStep] = useState(1);
     const [alias, setAlias] = useState("");
     const [title, setTitle] = useState("");
@@ -34,17 +34,19 @@ const Add = ({ auth, setAuth, setData, data }) => {
         stepClass()
     }, [step]);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         console.log({ alias, imageFile, content });
-        setData([{ id: data.length+1, alias, imageFile, title, content, date: new Date(Date.now()), walletId: 'abcdefghijklmnop' }, ...data]);
-        alert("Submitted...");
+        setData([{ id: data.length+1, alias, imageFile, title, content, date: new Date(Date.now()), walletId: wallet }, ...data]);
+        const response = await axios.post('http://localhost:8000', { id: data.length+1, alias, imageFile, title, content, date: new Date(Date.now()), walletId: wallet });
+        console.log("Congratulations Your Post have been made and a NFT has been rewarded in your account ", response);
         navigate('/');
      }
 
     const stepForm = () => {
         if (step === 1) {
             return (
-                <Step1 alias={alias} setAlias={setAlias} nextStep={nextStep} />
+                <Step1 alias={alias} setAlias={setAlias} nextStep={nextStep} wallet={wallet} />
             );
         } else if (step === 2) {
             return (
@@ -55,22 +57,21 @@ const Add = ({ auth, setAuth, setData, data }) => {
                 <Step3 content={content} setContent={setContent} handleSubmit={handleSubmit} prevStep={prevStep} />
             );
         }
-    }
-    const ethereumButton = document.querySelector('.enableEthereumButton');
-
-    ethereumButton.addEventListener('click', () => {
-        //Will Start the metamask extension
-        getAccount();
-    });
+    }    
+    const connect = async () => {
+        try {
+          const addresses = await ethereum.request({ method: "eth_requestAccounts" });
+          const account=addresses[0];
+          setWallet(account);
+          setAuth(true);
+        } catch (e) {
+          console.log("error in request", e);
+          // location.reload();
+        }
+    };
     
 
-    async function getAccount() {
-        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-        const account = accounts[0];
-        //yeh account(string) mujhe backend me transfer karna hai
-    }
-
-  if (auth) {
+  if (auth && wallet !== null) {
       return (
           <div className='container my-5 py-4 d-flex flex-column align-items-center'>
               <h1 className='display-6'>Add Content</h1>
@@ -107,7 +108,7 @@ const Add = ({ auth, setAuth, setData, data }) => {
             height: '80vh'
         }}>
             <h1 className='display-5'>You must connect your wallet to view this page</h1>
-            <button class="enableEthereumButton">Connect Metamask</button>
+            <button className="btn btn-primary mt-5" onClick={()=>{console.log("clicked to send request to Metamask");connect();}}>Connect Metamask</button>
             
         </div>
       )

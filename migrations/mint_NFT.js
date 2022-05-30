@@ -12,7 +12,7 @@ const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 
 //console.log(JSON.stringify(contract.abi));
 //this is the contract address we get after deploying
-const contractAddress = "0x6909e1Ee72287E883fc0A403670cC560a86B28Eb";
+const contractAddress = "0xC4c26a110A94fEeDEAeAcbeC5c2BE06CFB609637";
 
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 //create transaction
@@ -37,9 +37,10 @@ async function mintNFTandTransfer(tokenURI) {
           if (!err) {
             console.log(
               "The hash of your transaction is: ",
-              hash,
+              hash,//export to tranfer.js
               "\nCheck https://mumbai.polygonscan.com/ to view the status of your transaction!"
             );
+            return hash;
           } else {
             console.log(
               "Something went wrong in your transaction:",
@@ -52,8 +53,11 @@ async function mintNFTandTransfer(tokenURI) {
     .catch((err) => {
       console.log(" Promise failed:", err);
     });
-    nftContract.transfer(MyNFT.address);
+
 }
-mintNFTandTransfer(
-  "https://gateway.pinata.cloud/ipfs/QmR9cmeToyY7paebR5F2CYyoPKq7CjJN33onExP2KtJTvU"
-);
+
+// mintNFTandTransfer(
+//   "https://gateway.pinata.cloud/ipfs/QmR9cmeToyY7paebR5F2CYyoPKq7CjJN33onExP2KtJTvU"
+// );
+
+module.exports = mintNFTandTransfer;
