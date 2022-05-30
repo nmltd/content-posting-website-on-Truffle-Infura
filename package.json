@@ -10,7 +10,8 @@
     "test": "truffle test",
     "test:polygon": "truffle test --config=truffle-config.polygon.js --network=$npm_config_network",
     "compile:polygon": "truffle compile --config=truffle-config.polygon.js",
-    "migrate:polygon": "truffle migrate --config=truffle-config.polygon.js --network=$npm_config_network"
+    "migrate:polygon": "truffle migrate --config=truffle-config.polygon.js --network=$npm_config_network",
+    "dev" : "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -31,8 +32,13 @@
   "homepage": "https://github.com/truffle-box/polygon-box#readme",
   "devDependencies": {
     "@maticnetwork/maticjs": "^2.0.40",
-    "@truffle/hdwallet-provider": "^1.4.2",
-    "dotenv": "^9.0.0"
+    "@truffle/hdwallet-provider": "^1.7.0",
+    "dotenv": "^9.0.2",
+    "nodemon": "^2.0.16"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0",
+    "ethers": "^5.6.7",
+    "express": "^4.18.1"
+  }
 }
