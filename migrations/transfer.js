@@ -1,5 +1,6 @@
 require("dotenv").config();
-const API_URL = process.env.API_URL;
+const InfuraID = process.env.InfuraID;
+const API_URL = `https://polygon-mumbai.infura.io/v3/${InfuraID}`;
 const contract = require("../client/contract/polygon-contracts/MyNFT.json");
 const abi= contract.abi;
 const contractAddress=process.env.contractAddress;
