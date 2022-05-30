@@ -1,6 +1,6 @@
 Project Ambition: BUILD for Social Good on web3 with Infura and Truffle and Polygon
 
-Project Name: Supports for Social Good by making Contents.
+Project Name: no “Centralized” Middle Men Contents and Supports for Social Good
 
 Project Description:
 
