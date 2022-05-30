@@ -9,7 +9,7 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const contract = require("../client/contract/polygon-contracts/MyNFT.json");
 
 //this is the contract address we get after deploying
-const contractAddress=process.env.contractAddress;
+const contractAddress='0xC4c26a110A94fEeDEAeAcbeC5c2BE06CFB609637';
 
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 //create transaction
